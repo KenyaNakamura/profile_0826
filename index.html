@@ -12,41 +12,36 @@
 
 <body>
     <!--     -->
-    <div id="header-jump" style="display: block;">
-        <a class="link" href="#header">
-        
-            <span>header scr</span>
-        </a>
-    </div>
-    <!--video -->
-    <div class="mainvideo">
-        <video id="video" autoplay muted playsinline loop>
-            <source src="./assets/image/EX_01.mp4">
-
-        </video>
-    </div>
-
     <!-- header -->
     <header id="header">
         <p class="logo"><a href="#">PROFILE</a></p>
         <nav>
-            <ul>
+            <ul class="menu">
                 <li class="menu-top">
                     <a href="index.html">
                         <span class="tit"> トップ</span>
                         <span class="en">Top</span>
                     </a>
                 </li>
-                <li class="menu-top">
-                    <a href="#">
+                <li id="menu-top" class="menu-top">
+                    <a href="./index.html">
                         <span class="tit">サービス</span>
                         <span class="en">Service</span>
                     </a>
+                    <ul class="eizo">
+                        <li class="anime">
+                            <a href="./service.html"> 映像制作 / アニメーション動画制作</a>
+                        </li>
+                        <li class="hp">
+                            <a href="#">
+                                ホームページ制作</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="menu-top">
                     <a href="./infomation.html">
                         <span class="tit">お知らせ</span>
-                        <span class="en">Info</span>
+                        <span class="en">information</span>
                     </a>
                 </li>
 
@@ -60,6 +55,15 @@
             </ul>
         </nav>
     </header>
+    <!--video -->
+    <div class="mainvideo">
+        <video id="video" autoplay muted playsinline loop>
+            <source src="./assets/image/EX_01.mp4">
+
+        </video>
+    </div>
+
+
     <!-- box -->
     <div class="box"></div>
     <main>
@@ -79,9 +83,10 @@
         <section id="content2">
             <h2>お知らせ</h2>
             <ol>
-                <li><a href="#"><time datetime="2022-08-28">2022.08.28</time>お問い合わせページを追加しました。</a></li>
-                <li><a href="#"><time datetime="2022-08-27">2022.08.27</time>プロフィールを更新しました。</a></li>
-                <li><a href="#"><time datetime="2022-08-26">2022.08.26</time>PROFILEサイトを公開しました。</a></li>
+                <li><a href="./infomation.html"><time datetime="2022-08-28">2022.08.28</time>お問い合わせページを追加しました。</a></li>
+                <li><a href="./infomation.html"><time datetime="2022-08-27">2022.08.27</time>プロフィールを更新しました。</a></li>
+                <li><a href="./infomation.html#part3"><time
+                            datetime="2022-08-26">2022.08.26</time>PROFILEサイトを公開しました。</a></li>
             </ol>
             <p class="link_contact"><a href="./contact.html">お問い合わせはこちら</a></p>
         </section>
