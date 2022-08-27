@@ -1,0 +1,260 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+/* mainvideo  動画*/
+
+#video {
+    width: 100vw;
+}
+
+
+
+#header-jump a{
+    display: block;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    margin: 0 auto;
+    text-decoration: none;
+    background: yellow;
+}
+.link{
+    font-family: 'design_plus';
+    content: '\e90e';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    top: 23px;
+    left: 21px;
+    color: #333;
+    font-size: 18px;
+    display: block;
+}
+
+.link span{
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+
+
+
+
+/* header */
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+ul {
+    display: flex;
+}
+
+.menu-top {
+    margin-left: 100px;
+}
+
+.tit {
+    font-weight: bold;
+}
+
+.menu-top a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.en {
+    font-size: 4px;
+    color: gray;
+    opacity: 80%;
+}
+
+.box {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    margin-bottom: 30px;
+}
+
+
+
+/* section01 */
+#content1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.photo a img {
+    border-radius: 50%;
+    width: 30vw;
+}
+
+.text h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* section2 */
+
+#content2 {
+    margin: 0 auto;
+    padding: 10px 0 40px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+#content2 ol {
+    margin-bottom: 40px;
+    padding: 30px 40px 40px;
+    text-align: left;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+}
+
+#content2 ol li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid #d5c800;
+}
+
+#content2 ol li:last-child {
+    margin-bottom: 0;
+}
+
+#content2 ol li time {
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+#content2 h2 {
+    font-size: 30px;
+}
+
+/* 問い合わせボタン */
+.link_contact a {
+    display: inline-block;
+    padding: 15px 60px;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 5px 0 #b07c00;
+    background-color: #e29000;
+}
+
+.link_contact a:hover {
+    background-color: #e89d19;
+}
+
+/* footer */
+.footer {
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+
+/* information------------------------------ */
+#information {
+    padding: 80px 100px;
+    text-align: center;
+    background-color: #ede9e9;
+}
+
+#information .wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#information h1 {
+    display: inline-block;
+    margin: 0 auto 40px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    border-bottom: 4px solid #222;
+}
+
+#information article {
+    margin-bottom: 40px;
+    padding: 40px 40px 35px;
+    text-align: left;
+    border-radius: 20px;
+    background-color: white;
+}
+
+
+#information article h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #d5c800;
+}
+
+/* contact　真ん中揃えc */
+#contact {
+    padding: 80px 100px;
+    text-align: center;
+    background-color: #ede9e9;
+}
+
+#contact .wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* 全体のレイアウト */
+#contact h1 {
+    display: inline-block;
+    margin: 0 auto 30px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: 4px solid black;
+}
+
+#contact .text_lead {
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+#contact article {
+    margin-bottom: 40px;
+    padding: 40px 40px 35px;
+    text-align: left;
+    border-radius: 20px;
+    background-color: white;
+}
+
+
+/* 最後 */
+#contact article h2 {
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    font-size: 20px;
+    border-bottom: 2px solid #d5c800;
+}
+
+#contact article .text_content {
+    font-size: 15px;
+}
+
+#contact article .text_content a {
+    color: #0072d3;
+    font-weight: bold;
+}
+
+#contact article .text_content a:hover {
+    text-decoration: underline;
+}
