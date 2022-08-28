@@ -11,7 +11,11 @@
 <body>
     <header id="header">
         <p class="logo"><a href="#">PROFILE</a></p>
-        <nav>
+        <!-- レスポンシブ時のハンバーガーボタンとチェックボックス -->
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+        <!-- ここからメニュー -->
+        <nav class="hamburger-menu">
             <ul class="menu">
                 <li class="menu-top">
                     <a href="index.html">
@@ -20,7 +24,7 @@
                     </a>
                 </li>
                 <li id="menu-top" class="menu-top">
-                    <a href="./index.html">
+                    <a href="./service.html">
                         <span class="tit">サービス</span>
                         <span class="en">Service</span>
                     </a>
@@ -50,6 +54,7 @@
                 </li>
             </ul>
         </nav>
+        <!-- ここまでメニュー -->
     </header>
     <!-- main -->
     <div class="box"></div> 

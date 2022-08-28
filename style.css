@@ -2,6 +2,7 @@ body {
     font-family: "Noto Sans JP", sans-serif;
 }
 
+
 /* mainvideo  動画*/
 
 #video {
@@ -50,7 +51,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 30px 60px;
-    background-color: rgb(255, 255, 255);
+    background-color: #ede9e9;
     z-index: 1;
 
 }
@@ -87,7 +88,7 @@ body {
 }
 
 /* ヘッダーのホバー */
-#menu-top{
+#menu-top {
     position: relative;
 }
 
@@ -100,14 +101,18 @@ a::after {
     background: #000000;
     bottom: -2px;
     transform: scale(0, 1);
-    transform-origin: right top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
-    transition: transform 0.3s;  /*変形の時間*/
-    }
-    
-    a:hover::after {
-    transform: scale(1, 1);     /*ホバー後、x軸方向に1（相対値）伸長*/
-    transform-origin: left top; /*左から右に向かう*/
-    }
+    transform-origin: right top;
+    /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+    transition: transform 0.3s;
+    /*変形の時間*/
+}
+
+a:hover::after {
+    transform: scale(1, 1);
+    /*ホバー後、x軸方向に1（相対値）伸長*/
+    transform-origin: left top;
+    /*左から右に向かう*/
+}
 
 .eizo {
     display: none;
@@ -136,8 +141,9 @@ a::after {
     color: white;
 }
 
-.anime:hover,.hp:hover{
-background-color: #535664;
+.anime:hover,
+.hp:hover {
+    background-color: #535664;
 
 }
 
@@ -146,6 +152,7 @@ background-color: #535664;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 150px 0;
 }
 
 .photo a img {
@@ -330,3 +337,173 @@ background-color: #535664;
 }
 
 /* レスポンシブ対応 */
+@media screen and (max-width: 780px) {
+
+    #header {
+        position: static;
+        padding: 10px 60px;
+        justify-content: center;
+    }
+
+    .menu-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        background-color: #3584bb;
+    }
+
+    /* blockをつけることによって
+ラベルのスパンが縦並びになる
+スパンは真ん中の線（要素）
+contentに何も入れず
+要素の前と後ろを同じに線をつける
+abusoluteは絶対位置*/
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: white;
+        position: absolute;
+    }
+
+    /* 下から８px */
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+
+    /* 上から８px */
+    .menu-btn span:after {
+        top: 8px;
+    }
+
+    /* クリックしたら真ん中の線を消して×に動かす */
+    #menu-btn-check:checked~.menu-btn span {
+        background-color: rgba(255, 255, 255, 0);
+        /*メニューオープン時は真ん中の線を透明にする*/
+    }
+
+    #menu-btn-check:checked~.menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    #menu-btn-check:checked~.menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* メニュー部分の装飾 */
+    .menu {
+        display: block;
+    }
+
+    .menu-top {
+        margin-left: 0;
+    }
+
+    .menu-top a {
+        text-align: left;
+    }
+
+    .hamburger-menu {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 80;
+        background-color: #a6bccb;
+    }
+
+    .hamburger-menu ul {
+        padding: 70px 10px 0;
+    }
+
+    .hamburger-menu ul li {
+        border-bottom: solid 1px #ffffff;
+        list-style: none;
+    }
+
+    .hamburger-menu ul li a {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        box-sizing: border-box;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 9px 15px 10px 0;
+        position: relative;
+    }
+
+    .hamburger-menu ul li a::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px #ffffff;
+        border-right: solid 2px #ffffff;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11px;
+        top: 16px;
+    }
+
+    .hamburger-menu {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        /*leftの値を変更してメニューを画面外へ*/
+        z-index: 80;
+        background-color: #3584bb;
+        transition: all 0.5s;
+        /*アニメーション設定*/
+    }
+
+    #menu-btn-check:checked~.hamburger-menu {
+        left: 0;
+        /*メニューを画面内へ*/
+    }
+
+    .en {
+        color: azure;
+    }
+
+    a::after {
+        display: none;
+    }
+
+    /* service */
+    .video-gif {
+        display: block;
+        text-align: center;
+    }
+
+    #movie {
+        padding: 60px 100px 70px;
+    }
+    .video-gif img{
+        margin-bottom: 50px;
+    }
+    #menu-top:hover .eizo {
+        display: none
+    }
+
+    /* infomasion */
+    #information {
+        padding: 50px 100px 80px;}
+        /* contact */
+        #contact {
+            padding: 50px 100px 102px;
+
+}
